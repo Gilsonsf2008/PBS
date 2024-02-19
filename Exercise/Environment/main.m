@@ -1,35 +1,24 @@
 %
-clear all, clc;          % Inicializando todas as variaveis e Limpa a tela
+clear;
+close all;
+clc;          % Inicializando todas as variaveis e Limpa a tela
 %
-begin;
+tic;
+begin;         % Open Screen
 %
-[l, w, h, n, sig, mc] = variaveis;
+               % Inicitiation counters
+mcounter = 0;
 %
-mn= 0;
-while (mn == 0)
-  mn = menu('Escolha: ', 'Calc di', 'LS', 'WLS', 'RLS', 'TLS', 'All');
+                % Initial Variable
+%[l, w, n, sigma, mc] = variaveis;
+l = 50;
+w = 50;
+n = 15;
+sigma = 0.2;
+mc = 1;
+%
+while (mcounter == 0)
+  mcounter = menu('Escolha: ', 'Randon Position', 'LS', 'WLS', 'GTRS', 'SOCP', 'SDP', 'EKF','All');
+  [RMSE_LS, RMSE_WLS, RMSE_GTRS, RMSE_SOCP, RMSE_SDP, RMSE_EKF] = calc(l, w, n, sigma, mc, mcounter);
 end
-%
-if mn == 1
-  [di, user, node] = di_calc(l, w, h, n, sig, mc);
-elseif mn == 2
-  ls = lsestimator(l, w, h, n, sig);
-elseif mn == 3
-  wls = wlsestimator(l, w, h, n, sig);
-elseif mn == 4
-  rls = rlsestimator(l, w, h, n, sig);
-elseif mn == 5
-  tls = tlsestimator(l, w, h, n, sig);
-else mn == 6
-  all = allestimator(l, w, h, n, sig);
-end
-mn= 0;
-while (mn==0)
-  mn = menu('Choose graphics models: ', "Dot's User & Nodes");
-end
-%
-if mn ==1
-  graficos(user, node, mn, l, w, h);
-end
-%
-  
+toc;

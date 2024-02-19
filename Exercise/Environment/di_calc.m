@@ -1,11 +1,5 @@
-function [di, user, node] = di_calc(l, w, h, n, sig, mc)
+function [di] = di_calc(x, a_i, n, sigma)
 %
-%   graphic Models
+  di = sqrt((x(1)-a_i(1,:)).^2 + (x(2)-a_i(2,:)).^2)+sqrt((x(1)-a_i(1,:)).^2 + (x(2)-a_i(2,:)).^2)*sigma.*randn(1,n);
 %
-if mc == 1;
-  while (c <= mc)
-  [user, node] = position(l, w, h, n);
-  di = sqrt( (user(1) - node(n, 1)).^ 2 + (user(2) - node(n, 2)).^ 2 + (user(3) - node(n, 3)).^ 2) + ((sqrt( (user(1) - node(n, 1)).^ 2 + (user(2) - node(n, 2)).^ 2 + (user(3) - node(n, 3)).^ 2)) * sig * randn);
-   c = c + 1;
- end
- %
+end

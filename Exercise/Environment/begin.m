@@ -2,16 +2,16 @@ function Ini= begin              % Função de inicio com Headerclear all, clc
 %
 fprintf('----------------------------------------\n');
 fprintf('|                                      |\n');
-fprintf('|        Universidade Lusófona         |\n');
-fprintf('|     Departamento de Informática      |\n');
+fprintf('|        Universidade Lusofona         |\n');
+fprintf('|     Departamento de Informatica      |\n');
 fprintf('|                                      |\n');
-fprintf('|        Doutorado em Informática      |\n');
+fprintf('|        Doutorado em Informatica      |\n');
 fprintf('|                                      |\n');
-fprintf('|  Sistenma Baseado em Posicionamento  |\n');
+fprintf('|  Sistema Baseado em Posicionamento   |\n');
 fprintf('|          Dr. Slavisa Tomic           |\n');
 fprintf('|                                      |\n');
 fprintf('|      Doutorando Gilson Ferreira      |\n');
-fprintf('|          Primeiro Exercício          |\n');
+fprintf('|                                      |\n');
 fprintf('|             Environment              |\n');
 fprintf('|                                      |\n');
 fprintf('----------------------------------------\n\n');

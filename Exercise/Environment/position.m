@@ -1,17 +1,13 @@
-function [user, node] = position(l, w, h, n)
+function [x, a_i] = position(l, w, n)
 %
-% Calculo da posição do usuário
+% Calculo da posicao do usuario
 %
-user(1,1)= rand(1)*l;
-user(1,2)= rand(1)*w;
-user(1,3)= rand(1)*h;
+x(1,1) = l*rand(1);
+x(2,1) = w*rand(1);
 %
-% Calculo da posição dos Nodes
-%
-for lin = 1:1:n
-  node(lin,1)= rand(1)*l;
-  node(lin,2)= rand(1)*w;
-  node(lin,3)= rand(1)*h;
-  lin = lin + 1;
-endfor
+% Calculo da posicao dos Nodes
+  for j=1:n
+    a_i(1,j) = l*rand(1);
+    a_i(2,j) = w*rand(1);
+  end
 end

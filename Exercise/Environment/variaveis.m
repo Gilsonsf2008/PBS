@@ -1,11 +1,10 @@
-function [l, w, h, n, sig, mc] = variaveis
+function [l, w, n, s, mc] = variaveis
 %
 % Adiquirindo do usuário as variaveis mensuráveis
 %
 l= input('Qual o valor de L? ');
 w= input('Qual valor de W? ');
-h= input('Qual valor de H? ');
-sig= input('Qual valor de Sigma? ');
+s= input('Qual valor de Sigma? ');
 n= input('Qual quantidade de Nodes? ');
 mc= input('Quantas simulações de Monte Carlo? ');
 %
